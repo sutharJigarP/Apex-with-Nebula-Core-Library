@@ -1,6 +1,6 @@
 public without sharing class ExamplesOfVanillaVsNebulaCore {
     //example of addTo
-    public void extractConvertedData(List<Lead> leads){
+    public void extractConvertedLeadData(List<Lead> leads){
         Set<Id> accountIds = new Set<Id>();
         Set<Id> contactIds = new Set<Id>();
         Set<Id> opportunityIds = new Set<Id>();
