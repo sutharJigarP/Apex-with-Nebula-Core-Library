@@ -6,8 +6,7 @@ global class LeadConvertedSetAccountStatus implements nebc.AfterUpdate {
     //this will come from the trigger metadata
     public String initialStatus;
     public void handleAfterUpdate(List<Lead> oldList, List<Lead> newList){
-        Set<Id> leadIds = new Set<Id>(); 
-        List<Account> accountToUpdate = new List<Account>();
+        Set<Id> leadIds = new Set<Id>();
         newList = new nebc.LazyTriggerContextPairIterator(oldList, newList)
             .filterT(new nebc.IsFieldChangedInTrigger(Lead.IsConverted))
             .newRecords()
